@@ -30,8 +30,8 @@ body {
 .header__inner-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 350px;
-  min-width: 970px;
+  max-width: 970px;
+  flex: 1 1 970px;
 }
 
 .header__left {
@@ -85,9 +85,14 @@ body {
   justify-content: center;
   padding-bottom: 50vh;
   background-color: #222;
-  align-self: center;
+}
+.content__inner-wrapper {
+  flex: 1 1 970px;
+  max-width: 970px;
 }
 
 .content img {
   border-bottom: 2px solid black;
+  width: 100%;
+  height: auto;
 }
