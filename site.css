@@ -24,13 +24,18 @@ body {
   background-color: #333;
   color: #fefefe;
   display: flex;
-  justify-content: space-between;
-  padding: 0 350px;
+  justify-content: center;
   border-bottom: 2px solid black;
 }
 
+.header__inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 350px;
+  min-width: 970px;
+}
+
 .header__left {
-  padding-left: 48px;
 }
 
 .header__right {
@@ -64,6 +69,10 @@ body {
   display: flex;
   align-items: center;
   color: blue;
+}
+
+.header__social-nav li {
+  padding-left: 16px;
 }
 
 .header__social-nav a {
