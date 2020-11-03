@@ -5,6 +5,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
 .page_wrapper {
@@ -207,4 +208,15 @@ body {
   border-bottom: 2px solid black;
   width: 100%;
   height: auto;
+}
+
+.content__body {
+  color: #fefefe;
+  font-size: 110%;
+}
+
+.content__blurb {
+  margin-top: 8px;
+  font-size: 130%;
+  line-height: 1.4;
 }
