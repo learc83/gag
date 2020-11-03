@@ -16,11 +16,12 @@ body {
 }
 
 .header {
-  background-color: #333;
+  background-color: #222;
   color: #fefefe;
   display: flex;
   justify-content: center;
   border-bottom: 3px solid black;
+  border-top: 3px solid black;
   padding: 0.5em 8px;
 }
 
@@ -53,7 +54,7 @@ body {
 
 .header__nav li {
   padding-right: 24px;
-  font-size: 110%;
+  font-size: 120%;
   font-weight: 700;
 }
 
@@ -217,14 +218,24 @@ body {
 
 .content__body {
   color: #fefefe;
-  font-size: 110%;
   padding: 8px 16px;
+}
+
+.content__body span {
+  font-style: italic;
 }
 
 .content__blurb {
   font-size: 130%;
   line-height: 1.4;
   margin-bottom: 16px;
+}
+
+.content__blurb--bigger {
+  font-size: 140%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 8px;
 }
 
 #mc_embed_signup_scroll {
