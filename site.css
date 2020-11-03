@@ -32,6 +32,11 @@ body {
 }
 
 .header__left {
+  display: flex;
+}
+
+.header__left img {
+  margin-right: 16px;
 }
 
 .header__right {
@@ -68,6 +73,7 @@ body {
   list-style-type: none;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .header__mobile-wrapper {
@@ -114,6 +120,16 @@ body {
 
   .header__social-nav li:first-child {
     padding-left: 0;
+  }
+
+  .header__left img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: -48px;
+    /* left: 35vw; */
+    left: 0;
+    right: 0;
   }
 }
 
