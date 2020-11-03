@@ -119,10 +119,15 @@ body {
     flex-direction: column;
     align-items: start;
     margin-bottom: 16px;
+    padding-left: 8px;
   }
 
   .header__nav li {
-    margin-top: 16px;
+    margin-top: 24px;
+  }
+
+  .header__social-nav {
+    padding-left: 8px;
   }
 
   .header__social-nav li:first-child {
@@ -145,6 +150,7 @@ body {
 }
 
 .menu-button {
+  padding-left: 8px;
 }
 
 .menu-button div {
