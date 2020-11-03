@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glass Arrow Games</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="site.css" />
@@ -13,7 +14,7 @@
   <body>
     <div class="page_wrapper">
       <div class="header">
-        <div class="header__inner-wrapper">
+        <div class="header__inner-wrapper" id="menu-body">
           <div class="header__left">
             <ul class="header__nav">
               <li class="header__home">
@@ -52,6 +53,14 @@
             </ul>
           </div>
         </div>
+
+        <div class="header__mobile-wrapper mobile-menu">
+          <div class="mobile-menu__menu-button menu-button" id="menu-button">
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+          </div>
+        </div>
       </div>
       <div class="content">
         <div class="content__inner-wrapper">
@@ -59,5 +68,18 @@
         </div>
       </div>
     </div>
+    <script>
+      var open = false;
+      var menuButton = document.getElementById("menu-button");
+      var menuBody = document.getElementById("menu-body");
+      menuButton.onclick = function handleMenuClick() {
+        if (open) {
+          menuBody.classList.remove("header__inner-wrapper--open");
+        } else {
+          menuBody.classList.add("header__inner-wrapper--open");
+        }
+        open = !open;
+      };
+    </script>
   </body>
 </html>
