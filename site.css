@@ -79,6 +79,7 @@ body {
 
 .header__mobile-wrapper {
   display: none;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -87,11 +88,13 @@ body {
   }
 
   .header__inner-wrapper {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
   }
 
   .header__mobile-wrapper {
     display: block;
+    visibility: visible;
   }
 
   .header__inner-wrapper {
@@ -106,7 +109,8 @@ body {
   }
 
   .header__inner-wrapper--open {
-    display: block;
+    /* display: block; */
+    visibility: visible;
   }
 
   .header__nav {
@@ -227,19 +231,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
+  margin-top: -16px;
   width: 100%;
 }
 
+#mc_embed_signup_scroll div {
+  margin-top: 16px;
+}
+
 #mce-EMAIL {
-  font-size: 150%;
+  font-size: 140%;
   padding: 4px;
   height: 32px;
   margin-right: 16px;
 }
 
 #mc-embedded-subscribe {
-  font-size: 150%;
+  font-size: 130%;
   height: 100%;
   padding: 0 8px;
   color: #333;
+  font-weight: 700;
 }
