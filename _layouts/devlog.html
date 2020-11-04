@@ -4,21 +4,29 @@ layout: default
 
 {{ content }}
 <div class="devlog">
-    <ul class="devlog__list">
+  <ul class="devlog__list">
     {% for post in site.posts %}
-        <li class="devlog__post">
-            <div class="devlog__post-body">
-                <a class="devlog__link" href="{{ post.url }}">{{ post.title}}</a>
-            </div>
-            <div class="devlog__date">
-               <div class="devlog__month_day">
-                    {{ post.date | date: '%b %m' }}
-                </div> 
-               <div class="devlog__year">
-                    {{ post.date | date: '%Y' }}
-                </div> 
-            </div>
-        </li>
+    <li class="devlog__post">
+      <a class="devlog__link" href="{{ post.url }}">
+        <img
+          class="devlog__image"
+          src="assets/images/{{post.image}}"
+          alt="haxe logo"
+        />
+        <div class="devlog__post-body">
+          <div class="devlog__post-title">{{ post.title}}</div>
+          <div class="devlog__post-excerpt">
+            {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->"
+            %} {{ excerptParts[1] | strip_newlines | truncatewords: 50 }}
+          </div>
+        </div>
+        <div class="devlog__meta">
+          <div class="devlog__month_day">{{ post.date | date: '%b %m' }}</div>
+          <div class="devlog__year">{{ post.date | date: '%Y' }}</div>
+          <div class="devlog__author">{{post.author}}</div>
+        </div>
+      </a>
+    </li>
     {% endfor %}
-    </ul>
+  </ul>
 </div>

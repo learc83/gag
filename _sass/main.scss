@@ -219,7 +219,7 @@ body {
   background-color: #292929;
 }
 
-.content img {
+.index__hero {
   border-bottom: 2px solid black;
   width: 100%;
   height: auto;
@@ -294,21 +294,39 @@ body {
   &__post {
     background-color: #1a1a1a;
     margin-bottom: 16px;
+  }
+
+  &__link {
+    color: #fefefe;
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
-    min-height: 200px;
   }
 
   &__post-body {
     padding: 8px;
+    flex: 1 0 100px;
   }
 
-  &__date {
+  &__post-title {
+    font-size: 120%;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  &__image {
+    height: 100px;
+    margin: 8px;
+  }
+
+  &__meta {
     background-color: #333;
     padding: 4px;
     display: flex;
+    flex: 0 1 10%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   &__month_day {
@@ -324,19 +342,25 @@ body {
     justify-content: center;
   }
 
-  &__link {
-    color: #fefefe;
-    text-decoration: none;
+  &__author {
+    margin-top: 16px;
+    font-size: 130%;
   }
 }
 
 .post {
-  padding: 24px;
+  padding: 16px;
+  padding-bottom: 0;
 
   &__header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 16px;
+
+    h1 {
+      margin: 0;
+    }
   }
 
   &__nav {
@@ -359,5 +383,9 @@ body {
 
   &__back:hover {
     background-color: #666;
+  }
+
+  &__body p {
+    margin: 16px 0;
   }
 }
