@@ -417,6 +417,10 @@ body {
     h1 {
       margin: 0;
     }
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__nav {
@@ -426,6 +430,26 @@ body {
     margin-right: 16px;
     background-color: #444;
     padding-right: 8px;
+    align-items: stretch;
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      margin-right: 0;
+      padding: 0;
+      margin-top: 8px;
+    }
+  }
+
+  &__meta {
+    padding: 8px 0;
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding-right: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__back {
@@ -434,7 +458,9 @@ body {
     font-size: 150%;
     margin-right: 8px;
     background-color: #555;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
   }
 
   &__back:hover {
