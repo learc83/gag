@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Arrow Games | {{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href={{"font/flaticon.css" | absolute_url }} />
+  </head>
+  <body>
+    <div class="page_wrapper">
+      <div class="header">
+        <div class="header__inner-wrapper" id="menu-body">
+          <div class="header__left">
+            <img src="/assets/images/gag_no_text.png" height="40" alt="Glass Arrow Games" />
+            <ul class="header__nav">
+              <li class="header__slimebreaker {% if page.title == 'SlimeBreaker' %}header__link--active{%endif%}">
+                <a href="/"> SlimeBreaker </a>
+              </li>
+              <li class="header__devlog {% if page.title != 'SlimeBreaker' %}header__link--active{%endif%}">
+                <a href="/devlog">Devlog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__right">
+            <ul class="header__social-nav">
+              <li class="header__fb">
+                <a href="test.html">
+                  <i class="flaticon-043-twitter"></i>
+                </a>
+              </li>
+              <li class="header__twitter">
+                <a href="test.html">
+                  <i class="flaticon-016-twitch"></i>
+                </a>
+              </li>
+              <li class="header__fb">
+                <a href="test.html">
+                  <i class="flaticon-042-reddit"></i>
+                </a>
+              </li>
+              <li class="header__fb">
+                <a href="test.html">
+                  <i class="flaticon-021-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header__mobile-wrapper mobile-menu">
+          <div class="mobile-menu__menu-button menu-button" id="menu-button">
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+            <div class="menu-button"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content__inner-wrapper">
+          {{ content }}
+        </div>
+      </div>
+      <div class="footer">
+        © 2020 Glass Arrow Games, all rights reserved.
+      </div>
+    </div>
+    <script>
+      var open = false;
+      var menuButton = document.getElementById("menu-button");
+      var menuBody = document.getElementById("menu-body");
+      menuButton.onclick = function handleMenuClick() {
+        if (open) {
+          menuBody.classList.remove("header__inner-wrapper--open");
+        } else {
+          menuBody.classList.add("header__inner-wrapper--open");
+        }
+        open = !open;
+      };
+    </script>
+  </body>
+</html>
