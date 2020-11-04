@@ -301,6 +301,11 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      flex-wrap: wrap-reverse;
+      align-items: center;
+    }
   }
 
   &__post-body {
@@ -317,6 +322,9 @@ body {
   &__image {
     height: 100px;
     margin: 8px;
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   &__meta {
@@ -327,24 +335,72 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 600px) {
+      flex: 1 1 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 
-  &__month_day {
+  &__day {
     font-size: 130%;
     // flex: 1 1 20px;
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    @media only screen and (max-width: 600px) {
+      font-size: 110%;
+      margin-right: 4px;
+      margin-left: 4px;
+
+      &::after {
+        content: ",";
+      }
+    }
+  }
+
+  &__month {
+    @media only screen and (max-width: 600px) {
+      font-size: 110%;
+    }
   }
 
   &__year {
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 600px) {
+      font-size: 110%;
+    }
   }
 
   &__author {
     margin-top: 16px;
     font-size: 130%;
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+      margin-left: auto;
+      font-size: 110%;
+    }
+  }
+
+  &__post-excerpt {
+    img {
+      display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+      // width: 250px;
+      // white-space: nowrap;
+      overflow: hidden;
+      // text-overflow: ellipsis;
+      // max-height: 8ex;
+      img {
+        display: inline;
+        float: left;
+        height: 64px;
+        padding-right: 8px;
+      }
+    }
   }
 }
 
