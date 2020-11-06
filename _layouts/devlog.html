@@ -18,7 +18,7 @@ layout: default
           <div class="devlog__post-excerpt">
             <img src="assets/images/{{post.image}}" alt="haxe logo" />
             {% assign excerptParts = post.excerpt | split: "<!-- excerpt-start -->"
-            %} {{ excerptParts[1] | strip_newlines | truncatewords: 40 }}
+            %} {{ excerptParts[1] | strip_newlines | truncatewords: 45 }}
           </div>
         </div>
         <div class="devlog__meta">
